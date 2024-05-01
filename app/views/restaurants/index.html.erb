@@ -1,4 +1,7 @@
 <div class="container">
+<nav class="navbar">
+  <%= link_to "Add new restaurant", new_restaurant_path, class: "btn btn-primary m-3" %>
+</nav>
 <h1>Restaurants</h1>
 
 <ul>
@@ -7,5 +10,4 @@
   <% end %>
 </ul>
 
-<button><%= link_to "Add new restaurant", new_restaurant_path %></button>
 </div>

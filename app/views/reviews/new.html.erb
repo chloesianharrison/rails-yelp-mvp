@@ -1,8 +1,12 @@
 <div class="container">
+<nav class="navbar">
+  <%= link_to "Back to Restaurant", restaurant_path(@restaurant), class: "btn btn-primary m-3" %>
+  <%= link_to "Back to Restaurant List", root_path, class: "btn btn-primary m-3"%>
+</nav>
 <h1>Add new review</h1>
-
-<%= link_to "Back to Restaurant", restaurant_path(@restaurant), class: "btn btn-primary" %>
 
 <h2><%= @restaurant.name %></h2>
 <%= render "new_review", restaurant: @restaurant, review: @review %>
+
+
 </div>

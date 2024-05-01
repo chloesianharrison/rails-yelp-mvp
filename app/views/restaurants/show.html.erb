@@ -1,22 +1,24 @@
 <div class="container">
+<nav class="navbar">
+  <%= link_to "Add new review", new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
+  <%= link_to "Back to Restaurant List", root_path, class: "btn btn-primary m-3"%>
+  <%= link_to "Add new restaurant", new_restaurant_path, class: "btn btn-primary m-3" %>
+</nav>
 <h1><%= @restaurant.name %></h1>
 
 <p><strong>Address:</strong> <%= @restaurant.address %></p>
 <p><strong>Phone Number:</strong> <%= @restaurant.phone_number %></p>
 <p><strong>Category:</strong> <%= @restaurant.category %></p>
-<%= link_to "Back to restaurants", restaurants_path, class: "btn btn-primary" %>
 
 <h2>Reviews</h2>
 
 <ul>
   <% @reviews.each do |review| %>
   <li>
-  <%= review.restaurant_id %>
   <%= "⭐️" * review.rating %>
   <%= review.content %>
   </li>
   <% end %>
 </ul>
 
-<%= link_to "Add new review", new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
 </div>
