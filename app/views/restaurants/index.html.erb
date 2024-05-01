@@ -1,13 +1,15 @@
-<div class="container">
-<nav class="navbar">
+<div class="container m-3 text-center">
+<nav class="border-bottom border-2">
   <%= link_to "Add new restaurant", new_restaurant_path, class: "btn btn-primary m-3" %>
 </nav>
 <h1>Restaurants</h1>
 
-<ul>
+<div class="d-flex justify-content-around text-center flex-wrap">
   <% @restaurants.each do |restaurant| %>
-  <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+  <div class="card m-3 w-25 shadow p-3 mb-5 bg-body rounded">
+    <span class="card-title p-5"><%= link_to restaurant.name, restaurant_path(restaurant)%></span>
+  </div>
   <% end %>
-</ul>
+</div>
 
 </div>
